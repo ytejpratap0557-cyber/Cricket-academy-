@@ -10,8 +10,14 @@ Static, no-build website: HTML + Tailwind (CDN) + vanilla JavaScript.
 - `images/` – put your photos here
 - `netlify.toml` – Netlify config
 
+## Configure the academy
+Edit `js/config.js`: WhatsApp number, phone, email, address, `mapQuery` (shows Google Map), social links, `isDemo`.
+
+## Forms
+Admission and contact forms post to Netlify Forms (enable under Site settings > Forms; enquiries appear in the Netlify dashboard). If sending fails, visitors get a WhatsApp fallback. Admin dashboard data is demo data stored in the browser only.
+
 ## Add real photos
-Open `js/photos.js` and fill the `IMG` object:
+Easiest: follow `images/README.md` (file names) and set `photosReady:true`. Or fill the `IMG` object in `js/photos.js`:
 ```js
 IMG.hero = "images/hero.jpg";
 IMG.p0 = "images/beginner.jpg"; // programs p0–p8
